@@ -1,7 +1,7 @@
 ---
 version: "2.0"
 
-# Juno Mainnet Example using public providers.
+# Akash Mainnet Example using public providers.
 
 services:  
   redis:
@@ -23,23 +23,23 @@ services:
       # NOTE - most up to date will be in the docker-compose.yml file
       - REMOTE_CONFIG_TIME_FILE=https://raw.githubusercontent.com/Reecepbcups/cosmos-endpoint-cache/main/configs/cache_times.json      
       - REDIS_URL=redis://:rootpassword@akash.provider.domain.here:30830/0      
-      - REDIS_RPC_PREFIX=junorpc_1
+      - REDIS_RPC_PREFIX=akashrpc_1
       - ENABLE_COUNTER=false
       - USE_BACKUP_AS_PRIMARY=false
       # Use your own node IPs here as http://
-      - RPC_URL=https://rpc.juno.strange.love:443
-      - BACKUP_RPC_URL=https://juno-rpc.polkachu.com
+      - RPC_URL=https://rpc-akash.sg-1.online:443
+      - BACKUP_RPC_URL=https://akash-rpc.polkachu.com:443
       - RPC_WEBSOCKET=ws://15.204.143.232:26657/websocket
-      - NODE_MONIKER=reecepbcups
+      - NODE_MONIKER=SG-1
       - RPC_LISTEN_ADDRESS=HIDDEN
       - NODE_TM_VERSION=HIDDEN
       - COINGECKO_ENABLED=true
       # - COINGECKO_API_KEY=HERE
       - COINGECKO_CACHE_SECONDS=6 # do not change if you do not have an API key.
-      - COINGECKO_IDS=cosmos,juno-network,osmosis,canto
+      - COINGECKO_IDS=cosmos,juno-network,osmosis,canto, akash
       - COINGECKO_FIAT=usd,eur,gbp
-      - RPC_TITLE=Juno Docker RPC
-      - RPC_CUSTOM_TEXT=<a href="https://twitter.com/Reecepbcups_/status/1617396571188133888?s=20&t=OKi00IkStINFqYVweZXlaw">Custom caching solution active</a><br><a href="https://juno-api.reece.sh">My Juno REST API</a><br>
+      - RPC_TITLE=Akash Docker RPC
+      - RPC_CUSTOM_TEXT=<a href="https://twitter.com/clydedev_/status/1633511913723240453">Custom caching solution active</a><br><a href="https://api-akash.sg-1.online">SG-1 REST API</a><br>
     expose:
       - port: 5001
         to:
