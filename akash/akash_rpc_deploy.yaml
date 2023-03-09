@@ -21,14 +21,14 @@ services:
       - redis
     env:
       # NOTE - most up to date will be in the docker-compose.yml file
-      - REMOTE_CONFIG_TIME_FILE=https://raw.githubusercontent.com/Reecepbcups/cosmos-endpoint-cache/main/configs/cache_times.json      
+      - REMOTE_CONFIG_TIME_FILE=https://raw.githubusercontent.com/sg-1validator/cosmos-endpoint-cache/main/configs/cache_times.json      
       - REDIS_URL=redis://:rootpassword@akash.provider.domain.here:30830/0      
-      - REDIS_RPC_PREFIX=akashrpc_1
+      - REDIS_RPC_PREFIX=akashrpc
       - ENABLE_COUNTER=false
       - USE_BACKUP_AS_PRIMARY=false
       # Use your own node IPs here as http://
       - RPC_URL=https://rpc-akash.sg-1.online:443
-      - BACKUP_RPC_URL=https://akash-rpc.polkachu.com:443
+      - BACKUP_RPC_URL=http://bopa7r0l9lflj38paegc137sgo.ingress.europlots.com:80
       - RPC_WEBSOCKET=ws://15.204.143.232:26657/websocket
       - NODE_MONIKER=SG-1
       - RPC_LISTEN_ADDRESS=HIDDEN
@@ -36,7 +36,7 @@ services:
       - COINGECKO_ENABLED=true
       # - COINGECKO_API_KEY=HERE
       - COINGECKO_CACHE_SECONDS=6 # do not change if you do not have an API key.
-      - COINGECKO_IDS=cosmos,juno-network,osmosis,canto, akash
+      - COINGECKO_IDS=cosmos,juno-network,osmosis,canto,akash
       - COINGECKO_FIAT=usd,eur,gbp
       - RPC_TITLE=Akash Docker RPC
       - RPC_CUSTOM_TEXT=<a href="https://twitter.com/clydedev_/status/1633511913723240453">Custom caching solution active</a><br><a href="https://api-akash.sg-1.online">SG-1 REST API</a><br>
