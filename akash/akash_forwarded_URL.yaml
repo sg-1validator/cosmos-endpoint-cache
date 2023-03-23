@@ -28,7 +28,7 @@ services:
       - USE_BACKUP_AS_PRIMARY=false
       # Use your own node IPs here as http://
       - RPC_URL=https://rpc-akash.sg-1.online:443
-      - BACKUP_RPC_URL=http://9dkgkn4fole8r8qt6i4g6ag920.ingress.europlots.com/
+      - BACKUP_RPC_URL=http://9dkgkn4fole8r8qt6i4g6ag920.ingress.europlots.com:80
       - RPC_WEBSOCKET=ws://65.108.102.99:29657/websocketa
       - NODE_MONIKER=SG-1
       - RPC_LISTEN_ADDRESS=HIDDEN
