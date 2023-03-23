@@ -22,13 +22,13 @@ services:
     env:
       # NOTE - most up to date will be in the docker-compose.yml file
       - REMOTE_CONFIG_TIME_FILE=https://raw.githubusercontent.com/sg-1validator/cosmos-endpoint-cache/main/configs/cache_times.json      
-      - REDIS_URL=redis://:rootpassword@akash.provider.domain.here:30830/0      
+      - REDIS_URL=redis://:rootpassword@provider.europlots.com:32114/0      
       - REDIS_RPC_PREFIX=akashrpc
       - ENABLE_COUNTER=false
       - USE_BACKUP_AS_PRIMARY=false
       # Use your own node IPs here as http://
       - RPC_URL=https://rpc-akash.sg-1.online:443
-      - BACKUP_RPC_URL=http://bopa7r0l9lflj38paegc137sgo.ingress.europlots.com:80
+      - BACKUP_RPC_URL=http://4vkflglk1pdija0gcrkdlsqei0.ingress.europlots.com/
       - RPC_WEBSOCKET=ws://15.204.143.232:26657/websocket
       - NODE_MONIKER=SG-1
       - RPC_LISTEN_ADDRESS=HIDDEN
