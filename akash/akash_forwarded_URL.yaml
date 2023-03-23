@@ -22,7 +22,7 @@ services:
     env:
       # NOTE - most up to date will be in the docker-compose.yml file
       - REMOTE_CONFIG_TIME_FILE=https://raw.githubusercontent.com/sg-1validator/cosmos-endpoint-cache/main/configs/cache_times.json      
-      - REDIS_URL=redis://:rootpassword@provider.europlots.com:32114/0      
+      - REDIS_URL=redis://:rootpassword@provider.europlots.com:32401/0      
       - REDIS_RPC_PREFIX=akashrpc
       - ENABLE_COUNTER=false
       - USE_BACKUP_AS_PRIMARY=false
@@ -40,16 +40,10 @@ services:
       - COINGECKO_FIAT=usd,eur,gbp
       - RPC_TITLE=Akash Docker RPC
       - RPC_CUSTOM_TEXT=<a href="https://twitter.com/clydedev_/status/1633511913723240453">Custom caching solution active</a><br><a href="https://api-akash.sg-1.online">SG-1 REST API</a><br>
-      - 'url=cached-rpc-akash.sg1.online'
+      - 'url=https://cached-rpc-akash.sg1.online'
     expose:
       - port: 5001
-        to:
-          - global: true     
-      - port: 80
-        to:
-          - global: true  
-      - port: 32391
-        as: 443
+        as: 80
         accept:
           - "cached-rpc-akash.sg1.online"
         to:
