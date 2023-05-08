@@ -22,10 +22,9 @@ After=network.target
 PartOf=gunicorn.target
 ReloadPropagatedFrom=gunicorn.target
 [Service]
-User=root
-Group=root
-WorkingDirectory=/root/cosmos-endpoint-cache/%i
-ExecStart=/root/cosmos-endpoint-cache/run_rpc.sh
+User=clyde
+WorkingDirectory=/home/clyde/cosmos-endpoint-cache/%i
+ExecStart=/rhome/clyde/cosmos-endpoint-cache/run_rpc.sh
 Environment=WORKERS=4
 Environment=THREADS=6
 Environment=W_CONN=1000
@@ -67,10 +66,9 @@ After=network.target
 PartOf=gunicorn.target
 ReloadPropagatedFrom=gunicorn.target
 [Service]
-User=root
-Group=root
-WorkingDirectory=/root/cosmos-endpoint-cache/%i
-ExecStart=/root/cosmos-endpoint-cache/run_rest.sh
+User=clyde
+WorkingDirectory=/home/clyde/cosmos-endpoint-cache/%i
+ExecStart=/home/clyde/cosmos-endpoint-cache/run_rest.sh
 Environment=WORKERS=2
 Environment=THREADS=2
 Environment=W_CONN=1000
