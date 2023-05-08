@@ -24,7 +24,7 @@ ReloadPropagatedFrom=gunicorn.target
 [Service]
 User=clyde
 WorkingDirectory=/home/clyde/cosmos-endpoint-cache/%i
-ExecStart=/rhome/clyde/cosmos-endpoint-cache/run_rpc.sh
+ExecStart=/home/clyde/cosmos-endpoint-cache/run_rpc.sh
 Environment=WORKERS=4
 Environment=THREADS=6
 Environment=W_CONN=1000
