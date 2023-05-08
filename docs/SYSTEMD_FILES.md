@@ -10,7 +10,7 @@ chmod +x run_rpc.sh
 
 # If you are running as Group=root :
 # `sudo python -m pip install -r requirements/requirements.txt --upgrade`
-sudo nano /lib/systemd/system/NETWORK_RPC.service
+sudo nano /etc/systemd/system/NETWORK_RPC.service
 
 # Ensure to change WorkingDirectory and ExecStart to your folder locations
 # [ Threads are more important than Workers. Should be roughly <= (2xTHREADS)+1 ]
