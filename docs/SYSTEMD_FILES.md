@@ -42,8 +42,8 @@ sudo systemctl enable NETWORK_RPC.service # start after reboot
 
 # And restart it 1 time every night (~0s of downtime)
 #
-# crontab -e
-# 0 8 * * * systemctl restart NETWORK_RPC
+crontab -e
+0 8 * * * systemctl restart NETWORK_RPC
 ```
 
 ## REST
