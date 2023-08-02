@@ -2,7 +2,7 @@
   <img src="https://user-images.githubusercontent.com/31943163/217985088-cfcf62b3-808f-4ae3-a7f3-8c8486d941c9.png" />
 </p>
 
-Optimize Cosmos query calls by caching responses with a local or remote database.
+Optimize Cosmos query calls by caching responses with a local Key-Value store for a predefined set of time. 
 
 This program sits on top of another server and acts as a middleware between the requesting client and the actual cosmos RPC/API server.
 
@@ -22,14 +22,34 @@ It supports
 - Websocket basic passthrough support for Keplr wallet (TODO)
 - Index blocks (TODO)
 
-## My Nodes running this
+## Public Endpoints
+
+### Juno
 - <https://juno-rpc.reece.sh>
-- <https://juno-api.reece.sh>
+- <https://rpc-juno.goldenratiostaking.net/>
+
+### Akash
+- <https://cached-rpc-akash.sg1.online/>
+
+### CosmosHub
+- <https://cached-rpc-cosmos.sg1.online/>
+- <https://rpc-cosmoshub.goldenratiostaking.net/>
+
+### Comdex
+- <https://rpc-comdex.goldenratiostaking.net/>
+
+### Chihuahua
+- <https://rpc-chihuahua.goldenratiostaking.net/>
+
+### Injective
+- <https://rpc-injective.goldenratiostaking.net/>
 
 ## Pre-Requirements
 
 - A Cosmos RPC / REST server endpoint (state synced, full node, or archive).
 - A reverse proxy (to forward subdomain -> the endpoint cache on a machine)
+
+**NOTE** In the past, Redis was used. If you wish to use Redis still it can be found in [v0.0.8](https://github.com/Reecepbcups/cosmos-endpoint-cache/releases/tag/v0.0.8)
 
 ## Where to run
 
@@ -64,6 +84,7 @@ python3 rpc.py
 ## Running in Production
 
 - [Systemd Files](./docs/SYSTEMD_FILES.md)
+- [Tendermint Websocket Support](./docs/WEBSOCKET.md)
 - [Akash](./docs/AKASH.md)
 
 ## Documentation
